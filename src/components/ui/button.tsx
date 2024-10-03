@@ -15,7 +15,8 @@ const buttonVariants = cva(
           "border border-accent-secondary bg-background hover:bg-primary-foreground hover:text-accent-foreground",
       },
       size: {
-        default: "sm:h-14 h-10 sm:px-10 px-6 sm:py-2",
+        default: "h-10 px-6 sm:h-12 sm:px-8 sm:py-2",
+        sm:"h-12 px-8 py-2"
       },
     },
     defaultVariants: {
