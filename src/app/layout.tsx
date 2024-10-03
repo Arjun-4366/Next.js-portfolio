@@ -1,8 +1,9 @@
-// import localFont from "next/font/local";
+
 import { Anek_Latin } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import MenuSection from "@/components/Containers/MenuSection";
+import { Metadata } from "next";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -16,16 +17,20 @@ import MenuSection from "@/components/Containers/MenuSection";
 // });
 const anek = Anek_Latin({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Arjun T V - Portfolio",
   description: "MERN Stack Developer",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={cn('bg-background',anek.className)}>
-        <MenuSection/>
+      <body className={cn("bg-background", anek.className)}>
+        <MenuSection />
         <main>{children}</main>
       </body>
     </html>
