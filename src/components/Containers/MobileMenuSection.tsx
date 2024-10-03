@@ -45,9 +45,9 @@ const MobileMenuSection: React.FC = () => {
       <DrawerTrigger asChild className="md:hidden">
         <Button variant="outline" onClick={handleMobileMenu}>
           {menuOpen ? (
-            <IoClose className="text-4xl" />
+            <IoClose className="text-5xl" />
           ) : (
-            <IoMenu className="text-4xl" />
+            <IoMenu className="text-5xl" />
           )}
         </Button>
       </DrawerTrigger>
