@@ -1,6 +1,6 @@
 "use client";
 
-import { ROUTES } from "@/lib/data";
+import { ROUTES } from "@/utils/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +8,9 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { Button } from "../ui/button";
 import MobileMenuSection from "./MobileMenuSection";
+import { MotionButton, MotionImage, MotionList } from "@/utils/motionTags";
+import { transitions, variants } from "@/utils/framerVariants";
+import { delay } from "framer-motion";
 
 interface Route {
   id: number;
@@ -24,17 +27,31 @@ const MenuSection: React.FC = () => {
       )}>
       <nav className=" py-4 px-4 flex justify-between items-center md:px-4">
         <Link href={"/"}>
-          <Image
+          <MotionImage
+            initial="initial"
+            animate="animate"
+            variants={variants.scale}
+            transition={transitions.scale}
             src={"/pro.jpg"}
             alt={"logo"}
             width={60}
             height={45}
-            className="rounded-full"
+            className="rounded-full w-auto"
           />
         </Link>
         <ul className="md:flex hidden items-center text-[17px] gap-6 font-medium">
-          {ROUTES.map((route: Route) => (
-            <li key={route.id}>
+          {ROUTES.map((route: Route,i) => (
+            <MotionList
+              key={route.id}
+              initial="initial"
+              animate="animate"
+              variants={variants.moveDown}
+              transition={{
+                ...transitions.moveDown,
+                delay:i*0.1
+              }
+               
+                }>
               <Link
                 href={route.path}
                 className={cn(
@@ -43,12 +60,18 @@ const MenuSection: React.FC = () => {
                 )}>
                 {route.name}
               </Link>
-            </li>
+            </MotionList>
           ))}
         </ul>
-        <Button variant="outline" className="md:inline-block hidden">
+        <MotionButton
+          initial="initial"
+          animate="animate"
+          variants={variants.moveLeft}
+          transition={transitions.moveLeft}
+          variant="outline"
+          className="md:inline-block hidden">
           Get In touch
-        </Button>
+        </MotionButton>
         <MobileMenuSection />
       </nav>
     </header>
