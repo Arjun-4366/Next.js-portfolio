@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import MenuSection from "@/components/Containers/MenuSection";
 import { Metadata } from "next";
+import Footer from "@/components/Containers/Footer";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={cn("bg-background", anek.className)}>
         <MenuSection />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
