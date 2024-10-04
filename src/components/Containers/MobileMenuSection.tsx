@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
-import { ROUTES } from "@/lib/data";
+import { ROUTES } from "@/utils/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -24,8 +24,8 @@ const MobileMenuSection: React.FC = () => {
     <Drawer open={menuOpen} onOpenChange={setMenuOpen}>
       <DrawerContent>
         <div className="max-w-sm mx-auto w-full">
-          <div className="p-4 border-b">
-            <ul>
+          <div className="p-4 border-b space-y-6 list-none">
+  
               {ROUTES.map((route: Route) => (
                 <li key={route.id}>
                   <Link
@@ -38,7 +38,7 @@ const MobileMenuSection: React.FC = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+           
           </div>
         </div>
       </DrawerContent>
