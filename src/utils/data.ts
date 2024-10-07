@@ -10,6 +10,7 @@ type Icon ={
   id: number;
   name: string;
   icon: string;
+  link: string
 }
 
 export const ROUTES: ReadonlyArray<Route> = Object.freeze([
@@ -45,17 +46,20 @@ export const SOCIAL_MEDIA : ReadonlyArray<Icon> = Object.freeze(
 {
   id:1,
   name:"LinkedIn",
-  icon:'/linkedIn.png'
+  icon:'/linkedIn.png',
+  link:'https://www.linkedin.com/in/arjun-tv-8369522b5/'
 },
 {
   id:2,
   name:"Github",
-  icon:'/github.png'
+  icon:'/github.png',
+    link:'https://github.com/Arjun-4366'
 },
 {
   id:3,
   name:"Instagram",
-  icon:'/insta.png'
+  icon:'/insta.png',
+  link:'https://www.instagram.com/'
 }
 ]
 )
