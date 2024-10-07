@@ -3,12 +3,12 @@
 import { cn } from "@/lib/utils";
 import { Luckiest_Guy } from "next/font/google";
 import { transitions, variants } from "@/utils/framerVariants";
-import { MotionButton, MotionDiv, MotionImage } from "@/utils/motionTags";
+import { MotionButton, MotionDiv} from "@/utils/motionTags";
 import React from "react";
-import { trace } from "console";
 import { DownloadIcon } from "lucide-react";
 import { SOCIAL_MEDIA } from "@/utils/data";
 import Image from "next/image";
+import Link from "next/link";
 
 const luck = Luckiest_Guy({
   subsets: ["latin"],
@@ -67,22 +67,26 @@ function page() {
               <DownloadIcon className="mr-2" />
               Download CV
             </MotionButton>
-            <MotionDiv className="flex items-center justify-evenly gap-x-3 md:absolute mx-8 mt-3"  initial="initial"
+            <MotionDiv
+              className="flex items-center justify-evenly gap-x-3 md:absolute mx-8 mt-3"
+              initial="initial"
               animate="animate"
               variants={variants.moveDown}
               transition={{
                 ...transitions.moveDown,
-                delay:1
+                delay: 1,
               }}>
               {SOCIAL_MEDIA.map((item, i) => (
-                <Image
-                  key={item.id}
-                  src={item.icon}
-                  alt={item.name}
-                  width={25}
-                  height={25}
-                  className="object-cover cursor-pointer max-h-full hover:scale-110"
-                />
+                <Link href={item.link}>
+                  <Image
+                    key={item.id}
+                    src={item.icon}
+                    alt={item.name}
+                    width={25}
+                    height={25}
+                    className="object-cover cursor-pointer max-h-full hover:scale-110"
+                  />
+                </Link>
               ))}
             </MotionDiv>
           </h1>
