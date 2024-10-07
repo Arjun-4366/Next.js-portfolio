@@ -79,7 +79,7 @@ function page() {
               {SOCIAL_MEDIA.map((item, i) => (
                 <Link href={item.link}>
                   <Image
-                    key={item.id}
+                    key={i}
                     src={item.icon}
                     alt={item.name}
                     width={25}
