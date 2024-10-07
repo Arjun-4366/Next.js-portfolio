@@ -2,15 +2,13 @@
 
 import { ROUTES } from "@/utils/data";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Button } from "../ui/button";
 import MobileMenuSection from "./MobileMenuSection";
-import { MotionButton, MotionImage, MotionList } from "@/utils/motionTags";
+// import { MotionButton, MotionImage, MotionList } from "@/utils/MotionTags";
 import { transitions, variants } from "@/utils/framerVariants";
-import { delay } from "framer-motion";
+import { MotionButton, MotionImage, MotionList } from "@/utils/motionTags";
 
 interface Route {
   id: number;
@@ -40,7 +38,7 @@ const MenuSection: React.FC = () => {
           />
         </Link>
         <ul className="md:flex hidden items-center text-[17px] gap-6 font-medium">
-          {ROUTES.map((route: Route,i) => (
+          {ROUTES.map((route: Route, i) => (
             <MotionList
               key={route.id}
               initial="initial"
@@ -48,10 +46,8 @@ const MenuSection: React.FC = () => {
               variants={variants.moveDown}
               transition={{
                 ...transitions.moveDown,
-                delay:i*0.1
-              }
-               
-                }>
+                delay: i * 0.1,
+              }}>
               <Link
                 href={route.path}
                 className={cn(
