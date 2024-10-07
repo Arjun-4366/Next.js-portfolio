@@ -1,8 +1,16 @@
+import { FaLinkedin } from "react-icons/fa6";
+
 type Route = {
   id: number;
   name: string;
   path: string;
 };
+
+type Icon ={
+  id: number;
+  name: string;
+  icon: string;
+}
 
 export const ROUTES: ReadonlyArray<Route> = Object.freeze([
   {
@@ -31,3 +39,23 @@ export const ROUTES: ReadonlyArray<Route> = Object.freeze([
     path: "/contact",
   },
 ]);
+
+export const SOCIAL_MEDIA : ReadonlyArray<Icon> = Object.freeze(
+  [
+{
+  id:1,
+  name:"LinkedIn",
+  icon:'/linkedIn.png'
+},
+{
+  id:2,
+  name:"Github",
+  icon:'/github.png'
+},
+{
+  id:3,
+  name:"Instagram",
+  icon:'/insta.png'
+}
+]
+)
