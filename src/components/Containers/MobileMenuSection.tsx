@@ -21,8 +21,12 @@ const MobileMenuSection: React.FC = () => {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
   return (
-    <Drawer open={menuOpen} onOpenChange={setMenuOpen}>
-      <DrawerContent>
+   
+<Drawer open={menuOpen} onOpenChange={setMenuOpen} >
+      {menuOpen && (
+        <div className="bg-black bg-opacity-60 z-40 fixed inset-0"></div>
+      )}
+      <DrawerContent className="">
         <div className="max-w-sm mx-auto w-full">
           <div className="p-4 border-b space-y-6 list-none">
   
@@ -33,7 +37,7 @@ const MobileMenuSection: React.FC = () => {
                     className={cn(
                       "hover:text-primary",
                       path === route.path && "text-primary"
-                    )}>
+                    )} onClick={handleMobileMenu}>
                     {route.name}
                   </Link>
                 </li>
@@ -52,6 +56,8 @@ const MobileMenuSection: React.FC = () => {
         </Button>
       </DrawerTrigger>
     </Drawer>
+
+    
   );
 };
 
