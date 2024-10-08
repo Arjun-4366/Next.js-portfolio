@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { Luckiest_Guy } from "next/font/google";
 import { transitions, variants } from "@/utils/framerVariants";
-import { MotionButton, MotionDiv} from "@/utils/motionTags";
+import { MotionButton, MotionDiv, MotionImage } from "@/utils/motionTags";
 import React from "react";
 import { DownloadIcon } from "lucide-react";
 import { SOCIAL_MEDIA } from "@/utils/data";
@@ -17,9 +17,9 @@ const luck = Luckiest_Guy({
 
 function page() {
   return (
-    <div className="h-dvh flex overflow-hidden md:flex-row flex-col items-center justify-between pt-5 w-full">
+    <div className="h-dvh flex overflow-hidden md:flex-row flex-col items-center justify-between pt-5 w-full px-3">
       {/* parent div starts*/}
-      <div className="flex flex-col h-full justify-center space-y-6 md:items-end items-center relative max-w-xl md:ml-auto flex-1 gap-5">
+      <div className="flex flex-col h-full justify-center space-y-6 md:items-end items-center relative max-w-xl md:ml-auto flex-1 gap-5 mt-8">
         <MotionDiv
           initial="initial"
           animate="animate"
@@ -51,14 +51,14 @@ function page() {
           transition={transitions.moveRight}
           animate={"animate"}
           className={cn(
-            "md:text-right text-center relative md:-mt-8 mx-8",
+            "md:text-right text-center  md:-mt-8 mx-8",
             luck.className
           )}
           style={{ top: "-20px" }}>
           <h1 className="text-primary">
             Arjun T V <br />
             <MotionButton
-              className="font-mono"
+              className="font-mono flex items-center justify-center mt-2 ml-3"
               whileHover={{ scale: 0.95 }}
               initial="initial"
               animate="animate"
@@ -93,7 +93,22 @@ function page() {
         </MotionDiv>
       </div>
       {/* parent div ends */}
-      <div className="bg-red-500"></div>
+      <div className=" flex md:max-w-[50%] max-w-lg  items-end self-end">
+        <MotionImage
+          src={"/hero.png"}
+          alt="hero"
+          width={480}
+          height={480}
+          className="rounded-full object-cover max-h-full"
+          initial="initial"
+          animate="animate"
+          variants={variants.moveLeft}
+          transition={{
+            ...transitions.moveLeft,
+            delay:1.5
+          }}
+        />
+      </div>
     </div>
   );
 }
