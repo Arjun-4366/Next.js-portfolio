@@ -21,7 +21,7 @@ const MenuSection: React.FC = () => {
   return (
     <header
       className={cn(
-        "fixed z-50 left-0 right-0 bg-background border-b border-border/25"
+        "fixed z-50 left-0 right-0",path !=='/' && "bg-background border-b border-border/25"
       )}>
       <nav className=" py-4 px-4 flex justify-between items-center md:px-4">
         <Link href={"/"}>
