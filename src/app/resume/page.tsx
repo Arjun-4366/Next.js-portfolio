@@ -1,6 +1,7 @@
 "use client";
 
 import { TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BACK_END_SKILLS, FRONT_END_SKILLS, TOOLS } from "@/utils/data";
 // import ErrorBoundary from "@/utils/ErrorBoundary";
 import { transitions, variants } from "@/utils/framerVariants";
 import {
@@ -88,7 +89,7 @@ function page() {
             initial="initial"
             animate="animate"
             variants={variants.moveUp}
-            transition={transitions.moveUp}
+            transition={{ ...transitions.moveUp, delay: 0.5 }}
             className="mt-4"
             defaultValue="frontend">
             <TabsList className="bg-background">
@@ -97,74 +98,128 @@ function page() {
               <TabsTrigger value="tools">Development Tools</TabsTrigger>
             </TabsList>
             <TabsContent value="frontend" className="p-3">
-              <div className="flex gap-7">
-                <div className="inline-flex flex-col items-center">
-                  <MotionImage
-                    initial="initial"
-                    animate="animate"
-                    variants={variants.scale}
-                    transition={transitions.scale}
-                    src={"/resumelogo.png"}
-                    width={50}
-                    height={50}
-                    alt="profile"
-                    className=" rounded-full"
-                    
-                  />
-                  <p>React</p>
-                </div>
-                <div className="inline-flex flex-col items-center">
-                  <MotionImage
-                    initial="initial"
-                    animate="animate"
-                    variants={variants.scale}
-                    transition={transitions.scale}
-                    src={"/resumelogo.png"}
-                    width={50}
-                    height={50}
-                    alt="profile"
-                    className=" rounded-full"
-                  />
-                  <p>React</p>
-                </div>
-                <div className="inline-flex flex-col items-center">
-                  <MotionImage
-                    initial="initial"
-                    animate="animate"
-                    variants={variants.scale}
-                    transition={transitions.scale}
-                    src={"/resumelogo.png"}
-                    width={50}
-                    height={50}
-                    alt="profile"
-                    className=" rounded-full"
-                  />
-                  <p>React</p>
-                </div>
+              <div className="flex flex-wrap justify-start gap-7">
+                {FRONT_END_SKILLS.map((skills) => (
+                  <div className="inline-flex flex-col items-center cursor-pointer group">
+                    <MotionImage
+                      key={skills.id}
+                      initial="initial"
+                      animate="animate"
+                      variants={variants.scale}
+                      transition={transitions.scale}
+                      src={skills.path}
+                      width={50}
+                      height={50}
+                      alt="profile"
+                      className=" "
+                    />
+                    <p className="invisible group-hover:visible ">
+                      {skills.name}
+                    </p>
+                  </div>
+                ))}
               </div>
             </TabsContent>
             <TabsContent value="backend" className="p-3">
-              <h3>Node.js</h3>
-              <h3>Express.js</h3>
-              <h3>MongoDB</h3>
+              <div className="flex flex-wrap justify-start gap-7">
+                {BACK_END_SKILLS.map((skills) => (
+                  <div className="inline-flex flex-col items-center cursor-pointer group">
+                    <MotionImage
+                      key={skills.id}
+                      initial="initial"
+                      animate="animate"
+                      variants={variants.scale}
+                      transition={transitions.scale}
+                      src={skills.path}
+                      width={50}
+                      height={50}
+                      alt="profile"
+                      className=""
+                    />
+                    <p className="invisible group-hover:visible ">
+                      {skills.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </TabsContent>
             <TabsContent value="tools" className="p-3">
-              <h3>Git</h3>
-              <h3>Figma</h3>
-              <h3>Postman</h3>
-              <h3>GitHub</h3>
+              <div className="flex flex-wrap justify-start gap-7">
+                {TOOLS.map((skills) => (
+                  <div className="inline-flex flex-col items-center cursor-pointer group">
+                    <MotionImage
+                      key={skills.id}
+                      initial="initial"
+                      animate="animate"
+                      variants={variants.scale}
+                      transition={transitions.scale}
+                      src={skills.path}
+                      width={50}
+                      height={50}
+                      alt="profile"
+                      className=" "
+                    />
+                    <p className="invisible group-hover:visible ">
+                      {skills.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </TabsContent>
           </MotionTabs>
         </TabsContent>
         <TabsContent value="experience" className="p-3">
           <h6 className="text-primary">My professional output</h6>
           <p className="text-accent mt-1">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
-            eveniet similique eaque ex excepturi repudiandae, vitae quia
-            adipisci ad, quaerat incidunt consectetur voluptates repellendus
-            voluptatum laboriosam exercitationem quos quam pariatur tenetur nemo
-            quo possimus.
+            With an year of developmental experience, primarily focusing on the
+            MERN stack (MongoDB, Express, React, Node.js). Over this time, I
+            have completed several real-world projects that demonstrate my
+            ability to build full-stack applications, solve complex problems,
+            and implement scalable solutions.
           </p>
+          <MotionDiv
+            initial="initial"
+            animate="animate"
+            variants={variants.moveDown}
+            transition={{
+              ...transitions.moveDown,
+              delay: 0.5,
+            }}>
+            <h6 className="text-primary">Throughout this year, I have:</h6>
+            <ul className="list-disc">
+              <li>
+                Developed and deployed multiple web applications using MongoDB,
+                Express, React, and Node.js.
+              </li>
+              <li>
+                Worked on diverse projects such as an e-commerce platform, a
+                travel and tourism app, and a real-time chat application.
+              </li>
+              <li>
+                Gained hands-on experience with industry-standard tools and
+                technologies, including Git, AWS, and Vercel for deployment and
+                version control.
+              </li>
+              <li>
+                Continuously refined my skills by following best practices in
+                coding, system design, and project management, under the
+                guidance of a mentor.
+              </li>
+            </ul>
+          </MotionDiv>
+
+          <MotionDiv
+            initial="initial"
+            animate="animate"
+            variants={variants.moveDown}
+            transition={{
+              ...transitions.moveDown,
+              delay: 1,
+            }}>
+            <h6 className="text-primary">Other Experiences:</h6>
+            <h4>Network Engineer : Microsense Private Ltd (1 Year)</h4>
+            <h4>Quality Control Engineer : MAS Constructions (1 Year)</h4>
+          </MotionDiv>
         </TabsContent>
       </MotionTabs>
     </div>
