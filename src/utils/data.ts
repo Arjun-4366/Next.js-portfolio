@@ -13,17 +13,25 @@ type Icon = {
 type FrontSkills = {
   id: number;
   path: string;
-  name?:string
+  name?: string;
 };
 type BackSkills = {
   id: number;
   path: string;
-  name?:string
+  name?: string;
 };
 type Tools = {
   id: number;
   path: string;
-  name?:string
+  name?: string;
+};
+
+type Projects = {
+  id: number;
+  name: string;
+  description: string;
+  img: string;
+  stack: Array<string>;
 };
 
 export const ROUTES: ReadonlyArray<Route> = Object.freeze([
@@ -37,11 +45,11 @@ export const ROUTES: ReadonlyArray<Route> = Object.freeze([
     name: "Resume",
     path: "/resume",
   },
-  {
-    id: 3,
-    name: "Services",
-    path: "/services",
-  },
+  // {
+  //   id: 3,
+  //   name: "Services",
+  //   path: "/services",
+  // },
   {
     id: 4,
     name: "Projects",
@@ -79,48 +87,47 @@ export const FRONT_END_SKILLS: ReadonlyArray<FrontSkills> = Object.freeze([
   {
     id: 1,
     path: "/html.png",
-    name:'Html5'
+    name: "Html5",
   },
   {
     id: 2,
     path: "/css.png",
-    name:'Css3'
+    name: "Css3",
   },
   {
     id: 3,
     path: "/js.png",
-    name:'JavaScript'
+    name: "JavaScript",
   },
   {
     id: 4,
     path: "/react.png",
-    name:'React.js'
-
+    name: "React.js",
   },
   {
     id: 5,
     path: "/bootstrap.png",
-    name:'Bootstrap'
+    name: "Bootstrap",
   },
   {
     id: 6,
     path: "/tailwind.png",
-    name:'Tailwind CSS'
+    name: "Tailwind CSS",
   },
   {
     id: 7,
     path: "/next.png",
-    name:'Next.js'
+    name: "Next.js",
   },
   {
     id: 8,
     path: "/redux.png",
-    name:'Redux'
+    name: "Redux",
   },
   {
     id: 9,
     path: "/ts.png",
-    name:'TypeScript'
+    name: "TypeScript",
   },
 ]);
 
@@ -128,22 +135,22 @@ export const BACK_END_SKILLS: ReadonlyArray<BackSkills> = Object.freeze([
   {
     id: 1,
     path: "/node.png",
-    name:'Node.js'
+    name: "Node.js",
   },
   {
     id: 2,
     path: "/express.png",
-    name:'Express.js'
+    name: "Express.js",
   },
   {
     id: 3,
     path: "/mongodb.png",
-    name:'MongoDB'
+    name: "MongoDB",
   },
   {
     id: 4,
     path: "/rest.png",
-    name:'REST API'
+    name: "REST API",
   },
 ]);
 
@@ -151,32 +158,55 @@ export const TOOLS: ReadonlyArray<Tools> = Object.freeze([
   {
     id: 1,
     path: "/git.png",
-    name:'Git'
+    name: "Git",
   },
   {
     id: 2,
     path: "/github.png",
-    name:'Github'
+    name: "Github",
   },
   {
     id: 3,
     path: "/postman.png",
-    name:'Postman'
+    name: "Postman",
   },
   {
     id: 4,
     path: "/ec2.png",
-    name:'EC2'
+    name: "EC2",
   },
   {
     id: 5,
     path: "/figma.png",
-    name:"Figma"
+    name: "Figma",
   },
   {
     id: 6,
     path: "/vercel.png",
-    name:"Vercel"
+    name: "Vercel",
   },
+]);
 
+export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
+  {
+    id: 1,
+    name: "Kerala4u",
+    description: "Discover the beauty of Kerala with Kerala4U - Your personalized guide to God’s Own Country! Explore scenic destinations, local experiences, and curated travel plans all in one place",
+    img:'/kerala.jpg',
+    stack:['/js.png','/react.png','/mongodb.png','/tailwind.png','/ts.png','/next.png','/node.png']
+  },
+  {
+    id: 2,
+    name: "GearPlusX",
+    description: "Fuel your game with Gearplux – Your one-stop shop for top-tier sports gear and equipment! Whether you're hitting the field or the gym, we’ve got the gear to elevate your performance",
+    img:'/gear.jpeg',
+    stack:['/bootstrap.png','/ejs.png','/mongodb.png','/express.png','/node.png']
+  },
+  {
+    id: 1,
+    name: "Chat App",
+    description: " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
+    img:'/chat.jpg',
+    stack:['/js.png','/react.png','/css.png','/mongodb.png','/node.png','/redux.png']
+  },
 ]);
