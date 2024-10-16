@@ -32,6 +32,8 @@ type Projects = {
   description: string;
   img: string;
   stack: Array<string>;
+  git?:string;
+  live?:string
 };
 
 export const ROUTES: ReadonlyArray<Route> = Object.freeze([
@@ -192,8 +194,10 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
     id: 1,
     name: "Kerala4u",
     description: "Discover the beauty of Kerala with Kerala4U - Your personalized guide to God’s Own Country! Explore scenic destinations, local experiences, and curated travel plans all in one place",
-    img:'/kerala.jpg',
-    stack:['/js.png','/react.png','/mongodb.png','/tailwind.png','/ts.png','/next.png','/node.png']
+    img:'/kerala4u.jpg',
+    stack:['/js.png','/react.png','/mongodb.png','/tailwind.png','/ts.png','/next.png','/node.png'],
+    git:'https://github.com/Arjun-4366/Kerala-tourism',
+    live:'https://github.com/Arjun-4366/Kerala-tourism'
   },
   {
     id: 2,
@@ -213,7 +217,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
     id: 4,
     name: "BrightMinds",
     description: " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
-    img:'/edtech.jpg',
+    img:'/edtech.png',
     stack:['/js.png','/react.png','/tailwind.png','/node.png','/mongodb.png']
   },
   {
@@ -241,7 +245,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
     id: 6,
     name: "Rakuten",
     description: "responsive Clone of Rakuten",
-    img:'/rakuten.jpg',
+    img:'/rakuten.png',
     stack:['/html.png','/css.png']
   },
 ]);
