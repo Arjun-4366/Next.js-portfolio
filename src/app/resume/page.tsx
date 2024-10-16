@@ -63,7 +63,7 @@ function page() {
         </TabsList>
         <TabsContent value="about" className="p-3">
           <h6 className="text-primary">This is Me</h6>
-          <p className="text-accent mt-1">
+          <p className="text-white mt-1">
             Passionate Full Stack MERN Developer with extensive experience in
             designing and developing scalable web applications. Proficient in
             <span> MongoDB</span>, <span>Express.js</span>,{" "}
@@ -76,7 +76,7 @@ function page() {
         </TabsContent>
         <TabsContent value="skills" className="p-3">
           <h6 className="text-primary">My strengths</h6>
-          <p className="text-accent mt-1">
+          <p className="text-white mt-1">
             My strengths spans both frontend and backend development, with a
             focus on delivering intuitive user interfaces and efficient, secure
             server-side solutions. With a solid foundation in modern web
@@ -170,7 +170,7 @@ function page() {
         </TabsContent>
         <TabsContent value="experience" className="p-3">
           <h6 className="text-primary">My professional output</h6>
-          <p className="text-accent mt-1">
+          <p className="text-white mt-1">
             With an year of developmental experience, primarily focusing on the
             MERN stack (MongoDB, Express, React, Node.js). Over this time, I
             have completed several real-world projects that demonstrate my
