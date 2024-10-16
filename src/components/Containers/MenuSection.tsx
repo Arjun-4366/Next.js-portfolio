@@ -30,7 +30,7 @@ const MenuSection: React.FC = () => {
             animate="animate"
             variants={variants.scale}
             transition={transitions.scale}
-            src={"/logo1.jpg"}
+            src={"/logobg-black.png"}
             alt={"logo"}
             width={60}
             height={45}
