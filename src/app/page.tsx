@@ -95,11 +95,11 @@ function page() {
       {/* parent div ends */}
       <div className=" flex md:max-w-[50%] max-w-lg  items-end self-end">
         <MotionImage
-          src={"/hero.png"}
+          src={"/her01.png"}
           alt="hero"
           width={480}
           height={480}
-          className="rounded-full object-cover max-h-full"
+          className="rounded-full object-cover max-h-full mb-3"
           initial="initial"
           animate="animate"
           variants={variants.moveLeft}
