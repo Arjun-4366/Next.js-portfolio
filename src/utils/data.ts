@@ -203,10 +203,45 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
     stack:['/bootstrap.png','/ejs.png','/mongodb.png','/express.png','/node.png']
   },
   {
-    id: 1,
+    id: 3,
     name: "Chat App",
     description: " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
     img:'/chat.jpg',
     stack:['/js.png','/react.png','/css.png','/mongodb.png','/node.png','/redux.png']
+  },
+  {
+    id: 4,
+    name: "BrightMinds",
+    description: " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
+    img:'/edtech.jpg',
+    stack:['/js.png','/react.png','/tailwind.png','/node.png','/mongodb.png']
+  },
+  {
+    id: 5,
+    name: "Password Generate",
+    description: "creates strong, unique passwords to protect your accounts and privacy",
+    img:'/password.jpg',
+    stack:['/js.png','/react.png','/bootstrap.png']
+  },
+  {
+    id: 6,
+    name: "LinkedIn clone",
+    description: "responsive Clone of LinkedIn ",
+    img:'/link.png',
+    stack:['/html.png','/css.png','/bootstrap.png']
+  },
+  {
+    id: 7,
+    name: "Myntra clone",
+    description: "responsive Clone of Myntra ",
+    img:'/Myntra.png',
+    stack:['/html.png','/css.png']
+  },
+  {
+    id: 6,
+    name: "Rakuten",
+    description: "responsive Clone of Rakuten",
+    img:'/rakuten.jpg',
+    stack:['/html.png','/css.png']
   },
 ]);
