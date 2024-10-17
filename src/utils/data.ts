@@ -32,8 +32,8 @@ type Projects = {
   description: string;
   img: string;
   stack: Array<string>;
-  git?:string;
-  live?:string
+  git?: string;
+  live?: string;
 };
 
 export const ROUTES: ReadonlyArray<Route> = Object.freeze([
@@ -193,59 +193,109 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
   {
     id: 1,
     name: "Kerala4u",
-    description: "Discover the beauty of Kerala with Kerala4U - Your personalized guide to God’s Own Country! Explore scenic destinations, local experiences, and curated travel plans all in one place",
-    img:'/kerala4u.jpg',
-    stack:['/js.png','/react.png','/mongodb.png','/tailwind.png','/ts.png','/next.png','/node.png'],
-    git:'https://github.com/Arjun-4366/Kerala-tourism',
-    live:'https://github.com/Arjun-4366/Kerala-tourism'
+    description:
+      "Discover the beauty of Kerala with Kerala4U - Your personalized guide to God’s Own Country! Explore scenic destinations, local experiences, and curated travel plans all in one place",
+    img: "/kerala4u.jpg",
+    stack: [
+      "/js.png",
+      "/react.png",
+      "/mongodb.png",
+      "/tailwind.png",
+      "/ts.png",
+      "/next.png",
+      "/node.png",
+    ],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 2,
     name: "GearPlusX",
-    description: "Fuel your game with Gearplux – Your one-stop shop for top-tier sports gear and equipment! Whether you're hitting the field or the gym, we’ve got the gear to elevate your performance",
-    img:'/gear.jpeg',
-    stack:['/bootstrap.png','/ejs.png','/mongodb.png','/express.png','/node.png']
+    description:
+      "Fuel your game with Gearplux – Your one-stop shop for top-tier sports gear and equipment! Whether you're hitting the field or the gym, we’ve got the gear to elevate your performance",
+    img: "/gear.jpeg",
+    stack: [
+      "/bootstrap.png",
+      "/ejs.png",
+      "/mongodb.png",
+      "/express.png",
+      "/node.png",
+    ],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 3,
     name: "Chat App",
-    description: " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
-    img:'/chat.jpg',
-    stack:['/js.png','/react.png','/css.png','/mongodb.png','/node.png','/redux.png']
+    description:
+      " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
+    img: "/chat.jpg",
+    stack: [
+      "/js.png",
+      "/react.png",
+      "/css.png",
+      "/mongodb.png",
+      "/node.png",
+      "/redux.png",
+    ],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 4,
     name: "BrightMinds",
-    description: " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
-    img:'/edtech.png',
-    stack:['/js.png','/react.png','/tailwind.png','/node.png','/mongodb.png']
+    description:
+      " Real-time messaging made simple, secure, and seamless! From instant chats to group conversations, communicate effortlessly wherever you are",
+    img: "/edtech.png",
+    stack: [
+      "/js.png",
+      "/react.png",
+      "/tailwind.png",
+      "/node.png",
+      "/mongodb.png",
+    ],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 5,
     name: "Password Generate",
-    description: "creates strong, unique passwords to protect your accounts and privacy",
-    img:'/password.jpg',
-    stack:['/js.png','/react.png','/bootstrap.png']
+    description:
+      "Effortlessly create secure passwords with our Password Generator app – keeping your accounts safe, one strong password at a time!",
+    img: "/password.jpg",
+    stack: ["/js.png", "/react.png", "/bootstrap.png"],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
+  
   {
     id: 6,
     name: "LinkedIn clone",
-    description: "responsive Clone of LinkedIn ",
-    img:'/link.png',
-    stack:['/html.png','/css.png','/bootstrap.png']
+    description:
+      "Check out this LinkedIn clone demo built with just HTML, CSS, and Bootstrap – a simple yet sleek representation of the professional networking platform!",
+    img: "/link.png",
+    stack: ["/html.png", "/css.png", "/bootstrap.png"],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 7,
     name: "Myntra clone",
-    description: "responsive Clone of Myntra ",
-    img:'/Myntra.png',
-    stack:['/html.png','/css.png']
+    description:
+      "Explore this Myntra clone demo crafted with HTML and CSS – a clean and minimal take on the popular fashion e-commerce site!",
+    img: "/Myntra.png",
+    stack: ["/html.png", "/css.png"],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 6,
     name: "Rakuten",
-    description: "responsive Clone of Rakuten",
-    img:'/rakuten.png',
-    stack:['/html.png','/css.png']
+    description:
+      "Discover this Rakuten clone demo built with HTML and CSS – a streamlined version of the popular shopping rewards platform!",
+    img: "/rakuten.png",
+    stack: ["/html.png", "/css.png"],
+    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
 ]);
