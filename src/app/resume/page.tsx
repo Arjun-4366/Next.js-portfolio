@@ -39,15 +39,14 @@ function page() {
             <h5>Bangalore,India</h5>
           </MotionDiv>
         </div>
-        <MotionButton
-          className=""
+        <MotionDiv
+          className="text-2xl text-primary"
           initial="initial"
           animate="animate"
           variants={variants.moveDown}
-          transition={transitions.moveDown}
-          variant="outline">
-          MERN Stack Developer
-        </MotionButton>
+          transition={transitions.moveDown}>
+          Full Stack Developer
+        </MotionDiv>
       </div>
       <MotionTabs
         initial="initial"
