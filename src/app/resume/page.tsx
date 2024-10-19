@@ -45,7 +45,7 @@ function page() {
           animate="animate"
           variants={variants.moveDown}
           transition={transitions.moveDown}>
-          Full Stack Developer
+           Stack Developer
         </MotionDiv>
       </div>
       <MotionTabs
