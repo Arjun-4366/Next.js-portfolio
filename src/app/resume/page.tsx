@@ -5,7 +5,7 @@ import { BACK_END_SKILLS, FRONT_END_SKILLS, TOOLS } from "@/utils/data";
 // import ErrorBoundary from "@/utils/ErrorBoundary";
 import { transitions, variants } from "@/utils/framerVariants";
 import {
-  MotionButton,
+
   MotionDiv,
   MotionImage,
   MotionTabs,
@@ -45,7 +45,7 @@ function page() {
           animate="animate"
           variants={variants.moveDown}
           transition={transitions.moveDown}>
-           Stack Developer
+          Full Stack Developer
         </MotionDiv>
       </div>
       <MotionTabs
@@ -83,7 +83,7 @@ function page() {
             updated with the latest industry trends.
           </p>
 
-          {/* Nested Tabs */}
+     
           <MotionTabs
             initial="initial"
             animate="animate"
