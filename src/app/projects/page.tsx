@@ -1,54 +1,26 @@
 "use client";
-import dynamic from "next/dynamic";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { useState } from "react";
 import { PROJECTS } from "@/utils/data";
 import { transitions, variants } from "@/utils/framerVariants";
 import { MotionDiv, MotionImage } from "@/utils/motionTags";
 import Image from "next/image";
-import React, { useState } from "react";
-// import { Swiper as SwiperMain, SwiperSlide } from "swiper/react";
-// import Swiper from "swiper";
-
-
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import Swiper from "swiper";
 
-const SwiperMain = dynamic(()=>import("swiper/react").then(mod=>mod.Swiper),{
-  ssr:false
-})
-
-const SwiperSlide  = dynamic(()=>import("swiper/react").then(mod=>mod.SwiperSlide),{
-  ssr:false
-})
-
-import "swiper/css";
 
 function Page() {
-  const [project, setProject] = useState(PROJECTS[0]);
-  const [swiper, setSwiper] = useState<Swiper | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const project = PROJECTS[currentIndex];
 
-  const onSlideChange = (item: any): void => {
-    setProject(PROJECTS[item?.activeIndex]);
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === PROJECTS.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
-  const index = PROJECTS.findIndex((pro) => pro.name === project.name) + 1;
-
-  const nextPro = () => {
-    if (swiper) {
-      swiper.slideNext();
-    }
-  };
-
-  const prevPro = () => {
-    if (swiper) {
-      swiper.slidePrev();
-    }
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? PROJECTS.length - 1 : prevIndex - 1
+    );
   };
 
   return (
@@ -59,7 +31,8 @@ function Page() {
           animate="animate"
           variants={variants.moveUp}
           transition={transitions.moveUp}
-          className="text-center mb-10 mt-2">
+          className="text-center mb-10 mt-2"
+        >
           <h3>
             <span>Projects</span>
           </h3>
@@ -69,10 +42,11 @@ function Page() {
           animate="animate"
           variants={variants.moveDown}
           transition={transitions.moveDown}
-          className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 lg:pb-0 pb-7 items-center justify-between w-full">
+          className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 lg:pb-0 pb-7 items-center justify-between w-full"
+        >
           <div className="flex-1 space-y-3 text-center lg:text-left">
             <h2 className="text-6xl font-semibold text-primary">
-              {index > 10 ? index : "0" + index}
+              {currentIndex + 1 > 9 ? currentIndex + 1 : "0" + (currentIndex + 1)}
             </h2>
             <h3 className="text-2xl">{project.name}</h3>
             <p className="w-full lg:w-10/12 text-primary font-semibold tracking-wider space-x-2 text-sm lg:text-base">
@@ -94,90 +68,48 @@ function Page() {
               ))}
             </div>
             <div className="flex gap-x-3 justify-center lg:justify-start">
-              <TooltipProvider delayDuration={200}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="bg-black p-2.5 rounded-full">
-                      {project.git && (
-                        <Link href={project.git}>
-                          <Image
-                            src={"/github.png"}
-                            alt="github"
-                            width={40}
-                            height={40}
-                          />
-                        </Link>
-                      )}
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="text-white">Github</p>
-                  </TooltipContent>
-                </Tooltip>
-                {project.live && (
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <button className="bg-black p-2.5 rounded-full">
-                        {project.live && (
-                          <Link href={project.live}>
-                            <Image
-                              src={"/open.png"}
-                              alt="live"
-                              width={40}
-                              height={40}
-                            />
-                          </Link>
-                        )}
-                      </button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p className="text-white">Live Demo</p>
-                    </TooltipContent>
-                  </Tooltip>
-                )}
-              </TooltipProvider>
+              {project.git && (
+                <Link href={project.git}>
+                  <Image
+                    src={"/github.png"}
+                    alt="github"
+                    width={40}
+                    height={40}
+                    className="cursor-pointer"
+                  />
+                </Link>
+              )}
+              {project.live && (
+                <Link href={project.live}>
+                  <Image
+                    src={"/open.png"}
+                    alt="live"
+                    width={40}
+                    height={40}
+                    className="cursor-pointer"
+                  />
+                </Link>
+              )}
             </div>
           </div>
 
-          <div className="flex-1 flex items-center justify-center w-full flex-col ">
-            <SwiperMain
-              breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 1.3,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 1.4,
-                  spaceBetween: 30,
-                },
-              }}
-              className="w-full max-w-xs sm:max-w-md md:max-w-lg flex items-center justify-center place-items-center"
-              spaceBetween={20}
-              onSlideChange={onSlideChange}
-              onSwiper={(s) => setSwiper(s)}>
-              {PROJECTS.map((pro, i) => (
-                <SwiperSlide
-                  key={pro.id}
-                  className={cn(index - 1 !== i && "opacity-45", "")}>
-                  <div className="min-w-[250px] min-h-[250px] mx-auto">
-                    <Image
-                      src={pro.img}
-                      alt={pro.name}
-                      width={300}
-                      height={300}
-                      className="rounded-lg object-cover"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </SwiperMain>
-
+       
+          <div className="flex-1 flex items-center justify-center w-full flex-col">
+            <div className="min-w-[250px] min-h-[250px] mx-auto">
+              <MotionImage
+                initial = "initial"
+                animate = "animate"
+                variants={variants.moveLeft}
+                transition={transitions.moveLeft}
+                src={project.img}
+                alt={project.name}
+                width={300}
+                height={300}
+                className="rounded-lg object-cover"
+              />
+            </div>
             <div className="flex mt-4 gap-x-4">
-              <button onClick={prevPro} disabled={index === 1}>
+              <button onClick={prevSlide} disabled={currentIndex === 0}>
                 <Image
                   src={"/previous.png"}
                   alt="prev"
@@ -186,7 +118,10 @@ function Page() {
                   className="cursor-pointer"
                 />
               </button>
-              <button onClick={nextPro} disabled={index === PROJECTS.length}>
+              <button
+                onClick={nextSlide}
+                disabled={currentIndex === PROJECTS.length - 1}
+              >
                 <Image
                   src={"/nextslide.png"}
                   alt="next"
