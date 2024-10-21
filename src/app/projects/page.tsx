@@ -1,5 +1,5 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import {
   Tooltip,
   TooltipContent,
@@ -11,12 +11,21 @@ import { transitions, variants } from "@/utils/framerVariants";
 import { MotionDiv, MotionImage } from "@/utils/motionTags";
 import Image from "next/image";
 import React, { useState } from "react";
-import { Swiper as SwiperMain, SwiperSlide } from "swiper/react";
-import Swiper from "swiper";
+// import { Swiper as SwiperMain, SwiperSlide } from "swiper/react";
+// import Swiper from "swiper";
 
 import "swiper/css";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Swiper from "swiper";
+
+const SwiperMain = dynamic(()=>import("swiper/react").then(mod=>mod.Swiper),{
+  ssr:false
+})
+
+const SwiperSlide  = dynamic(()=>import("swiper/react").then(mod=>mod.SwiperSlide),{
+  ssr:false
+})
 
 function Page() {
   const [project, setProject] = useState(PROJECTS[0]);
