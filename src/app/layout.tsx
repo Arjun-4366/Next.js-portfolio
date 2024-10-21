@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import MenuSection from "@/components/Containers/MenuSection";
 import { Metadata } from "next";
 import Footer from "@/components/Containers/Footer";
+import Toaster from "@/components/ui/toaster";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <MenuSection />
         <main className="min-h-screen">{children}</main>
         <Footer/>
+        <Toaster/>
       </body>
     </html>
   );
