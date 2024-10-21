@@ -99,7 +99,7 @@ function page() {
             <TabsContent value="frontend" className="p-3">
               <div className="flex flex-wrap justify-start gap-7">
                 {FRONT_END_SKILLS.map((skills) => (
-                  <div className="inline-flex flex-col items-center cursor-pointer group">
+                  <div className="inline-flex flex-col items-center cursor-pointer group" key={skills.id}>
                     <MotionImage
                       key={skills.id}
                       initial="initial"
@@ -122,7 +122,7 @@ function page() {
             <TabsContent value="backend" className="p-3">
               <div className="flex flex-wrap justify-start gap-7">
                 {BACK_END_SKILLS.map((skills) => (
-                  <div className="inline-flex flex-col items-center cursor-pointer group">
+                  <div className="inline-flex flex-col items-center cursor-pointer group" key={skills.id}>
                     <MotionImage
                       key={skills.id}
                       initial="initial"
@@ -145,7 +145,7 @@ function page() {
             <TabsContent value="tools" className="p-3">
               <div className="flex flex-wrap justify-start gap-7">
                 {TOOLS.map((skills) => (
-                  <div className="inline-flex flex-col items-center cursor-pointer group">
+                  <div className="inline-flex flex-col items-center cursor-pointer group" key={skills.id}>
                     <MotionImage
                       key={skills.id}
                       initial="initial"
