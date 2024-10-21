@@ -1,11 +1,32 @@
-import React from 'react'
+"use client"
 
-const page =()=> {
+import ContactForm from "@/components/ui/ContactForm";
+import { transitions, variants } from "@/utils/framerVariants";
+import { MotionDiv } from "@/utils/motionTags";
+import React from "react";
+
+const page = () => {
   return (
-    <div>
-      contact section
-    </div>
-  )
-}
+    <div className=" container grid place-items-center h-screen 2xl:pt-0 pt-20">
+      <MotionDiv
+        className="z-10"
+        initial="initial"
+        animate="animate"
+        variants={variants.moveUp}
+        transition={transitions.moveUp}>
 
-export default page
+<div className="text-center">
+  <h3>
+   Let's<span> Build</span> Something Together
+  </h3>
+  <p className="text-gray-500 mt-5 w-auto mx-auto">
+  Looking for a MERN stack developer? Let's talk
+  </p>
+</div>
+<ContactForm/>
+        </MotionDiv>
+    </div>
+  );
+};
+
+export default page;
