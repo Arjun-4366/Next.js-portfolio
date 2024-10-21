@@ -102,7 +102,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/components/ui/label.tsx"  ],
   "exclude": [
     "node_modules"
   ]
