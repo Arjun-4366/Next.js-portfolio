@@ -197,7 +197,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "Discover the beauty of Kerala with Kerala4U - Your personalized guide to God’s Own Country! Explore scenic destinations, local experiences, and curated travel plans all in one place",
     img: "/kerala4u.jpg",
     stack: [
-      "/js.png",
+      "/js.png", 
       "/react.png",
       "/mongodb.png",
       "/tailwind.png",
@@ -206,7 +206,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "/node.png",
     ],
     git: "https://github.com/Arjun-4366/Kerala-tourism",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    // live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 2,
@@ -239,7 +239,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "/redux.png",
     ],
     git: "https://github.com/Arjun-4366/Kerala-tourism",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    // live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
     id: 4,
@@ -265,7 +265,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
     img: "/password.jpg",
     stack: ["/js.png", "/react.png", "/bootstrap.png"],
     git: "https://github.com/Arjun-4366/Kerala-tourism",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    // live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   
   {
