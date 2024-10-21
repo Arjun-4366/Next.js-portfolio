@@ -36,7 +36,7 @@ function ContactForm({}: Props) {
     },
   });
   const { toast } = useToast();
-  const onSubmit = (data: object) => {
+  const onSubmit = () => {
     toast({
       title: "Message sent succesfully",
       description:
