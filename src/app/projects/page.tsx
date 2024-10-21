@@ -48,10 +48,9 @@ function Page() {
           animate="animate"
           variants={variants.moveUp}
           transition={transitions.moveUp}
-          className="text-center mb-10"
-        >
+          className="text-center mb-10 mt-2">
           <h3>
-            My<span> Project page</span>
+            <span>Projects</span>
           </h3>
         </MotionDiv>
         <MotionDiv
@@ -59,8 +58,7 @@ function Page() {
           animate="animate"
           variants={variants.moveDown}
           transition={transitions.moveDown}
-          className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 lg:pb-0 pb-7 items-center justify-between w-full"
-        >
+          className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-10 lg:pb-0 pb-7 items-center justify-between w-full">
           <div className="flex-1 space-y-3 text-center lg:text-left">
             <h2 className="text-6xl font-semibold text-primary">
               {index > 10 ? index : "0" + index}
@@ -105,25 +103,27 @@ function Page() {
                     <p className="text-white">Github</p>
                   </TooltipContent>
                 </Tooltip>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="bg-black p-2.5 rounded-full">
-                      {project.live && (
-                        <Link href={project.live}>
-                          <Image
-                            src={"/open.png"}
-                            alt="live"
-                            width={40}
-                            height={40}
-                          />
-                        </Link>
-                      )}
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="text-white">Live Demo</p>
-                  </TooltipContent>
-                </Tooltip>
+                {project.live && (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button className="bg-black p-2.5 rounded-full">
+                        {project.live && (
+                          <Link href={project.live}>
+                            <Image
+                              src={"/open.png"}
+                              alt="live"
+                              width={40}
+                              height={40}
+                            />
+                          </Link>
+                        )}
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-white">Live Demo</p>
+                    </TooltipContent>
+                  </Tooltip>
+                )}
               </TooltipProvider>
             </div>
           </div>
@@ -147,10 +147,11 @@ function Page() {
               className="w-full max-w-xs sm:max-w-md md:max-w-lg flex items-center justify-center place-items-center"
               spaceBetween={20}
               onSlideChange={onSlideChange}
-              onSwiper={(s) => setSwiper(s)}
-            >
-              {PROJECTS.map((pro,i) => (
-                <SwiperSlide key={pro.id} className={cn(index - 1 !== i && "opacity-45", "")}>
+              onSwiper={(s) => setSwiper(s)}>
+              {PROJECTS.map((pro, i) => (
+                <SwiperSlide
+                  key={pro.id}
+                  className={cn(index - 1 !== i && "opacity-45", "")}>
                   <div className="min-w-[250px] min-h-[250px] mx-auto">
                     <Image
                       src={pro.img}
