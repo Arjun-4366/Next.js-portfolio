@@ -13,14 +13,14 @@ const page = () => {
         initial="initial"
         animate="animate"
         variants={variants.moveUp}
-        transition={transitions.moveUp}>
+        transition={transitions.moveUp}>  
 
 <div className="text-center">
   <h3>
-   Let's<span> Build</span> Something Together
+   Let&apos;s<span> Build</span> Something Together
   </h3>
   <p className="text-gray-500 mt-5 w-auto mx-auto">
-  Looking for a MERN stack developer? Let's talk
+  Looking for a MERN stack developer? Leave a Message
   </p>
 </div>
 <ContactForm/>
