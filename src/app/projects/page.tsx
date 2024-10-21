@@ -14,7 +14,7 @@ import React, { useState } from "react";
 // import { Swiper as SwiperMain, SwiperSlide } from "swiper/react";
 // import Swiper from "swiper";
 
-import "swiper/css";
+
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Swiper from "swiper";
@@ -26,6 +26,8 @@ const SwiperMain = dynamic(()=>import("swiper/react").then(mod=>mod.Swiper),{
 const SwiperSlide  = dynamic(()=>import("swiper/react").then(mod=>mod.SwiperSlide),{
   ssr:false
 })
+
+import "swiper/css";
 
 function Page() {
   const [project, setProject] = useState(PROJECTS[0]);
