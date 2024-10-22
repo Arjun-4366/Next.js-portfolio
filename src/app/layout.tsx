@@ -2,10 +2,16 @@
 import { Anek_Latin } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import MenuSection from "@/components/Containers/MenuSection";
+// import MenuSection from "@/components/Containers/MenuSection";
 import { Metadata } from "next";
-import Footer from "@/components/Containers/Footer";
-import Toaster from "@/components/ui/toaster";
+// import Footer from "@/components/Containers/Footer";
+// import Toaster from "@/components/ui/toaster";
+import dynamic from "next/dynamic";
+
+const MenuSection = dynamic(()=>import('@/components/Containers/MenuSection'),{ssr:false})
+const Footer = dynamic(()=>import(('@/components/Containers/Footer')),{ssr:false})
+const Toaster = dynamic(()=>import(('@/components/ui/toaster')),{ssr:false})
+
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
