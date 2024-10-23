@@ -66,7 +66,8 @@ const MenuSection: React.FC = () => {
           transition={transitions.moveLeft}
           variant="outline"
           className="md:inline-block hidden">
-          Get In touch
+
+          <Link href={'/contact'}>Get In Touch</Link>
         </MotionButton>
         <MobileMenuSection />
       </nav>
