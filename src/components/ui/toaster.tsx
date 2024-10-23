@@ -36,7 +36,7 @@ const Toaster:React.FC = ()=> {
               )}
             </div>
             {action }
-            <ToastClose altText=""/>
+            <ToastClose altText="" onClick={()=>props.dismiss && props.dismiss()}/>
           </Toast>)
         );
       })}
