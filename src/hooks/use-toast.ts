@@ -3,7 +3,7 @@
 import * as React from "react";
 
 
-const TOAST_REMOVE_DELAY = 1000000;
+const TOAST_REMOVE_DELAY = 5000;
 
 interface Toast {
   id: string;
@@ -168,13 +168,17 @@ function useToast() {
       if (index > -1) {
         listeners.splice(index, 1);
       }
+      setTimeout(()=>{
+        dispatch({type:actionTypes.DISMISS_TOAST})
+      },TOAST_REMOVE_DELAY)
+      
     };
   }, [state]);
 
   return {
     ...state,
     toast,
-    dismiss: (toastId:string) => dispatch({ type: "DISMISS_TOAST", toastId }),
+    dismiss: (toastId:string) => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
   };
 }
 
