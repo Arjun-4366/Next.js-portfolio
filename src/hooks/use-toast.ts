@@ -172,7 +172,7 @@ function useToast() {
         dispatch({type:actionTypes.DISMISS_TOAST})
       },TOAST_REMOVE_DELAY)
       
-    };
+    }; 
   }, [state]);
 
   return {
