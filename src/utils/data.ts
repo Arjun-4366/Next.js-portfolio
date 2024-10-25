@@ -192,7 +192,7 @@ export const TOOLS: ReadonlyArray<Tools> = Object.freeze([
 export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
   {
     id: 1,
-    name: "Kerala4u",
+    name: "Kerala4u-ongoing",
     description:
       "Discover the beauty of Kerala with Kerala4U - Your personalized guide to God’s Own Country! Explore scenic destinations, local experiences, and curated travel plans all in one place",
     img: "/kerala4u.jpg",
@@ -221,7 +221,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "/express.png",
       "/node.png",
     ],
-    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    git: "https://github.com/Arjun-4366/Gear-plus-X",
     live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
@@ -238,7 +238,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "/node.png",
       "/redux.png",
     ],
-    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    git: "https://github.com/Arjun-4366/MERN-Chat-App",
     // live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   {
@@ -264,7 +264,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "Effortlessly create secure passwords with our Password Generator app – keeping your accounts safe, one strong password at a time!",
     img: "/password.jpg",
     stack: ["/js.png", "/react.png", "/bootstrap.png"],
-    git: "https://github.com/Arjun-4366/Kerala-tourism",
+    git: "https://github.com/Arjun-4366/React-password-generator",
     // live: "https://github.com/Arjun-4366/Kerala-tourism",
   },
   
@@ -275,8 +275,8 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "Check out this LinkedIn clone demo built with just HTML, CSS, and Bootstrap – a simple yet sleek representation of the professional networking platform!",
     img: "/link.png",
     stack: ["/html.png", "/css.png", "/bootstrap.png"],
-    git: "https://github.com/Arjun-4366/Kerala-tourism",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    git: "https://github.com/Arjun-4366/Linkedin",
+    live: "https://arjun-4366.github.io/Linkedin/",
   },
   {
     id: 7,
@@ -285,8 +285,8 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "Explore this Myntra clone demo crafted with HTML and CSS – a clean and minimal take on the popular fashion e-commerce site!",
     img: "/Myntra.png",
     stack: ["/html.png", "/css.png"],
-    git: "https://github.com/Arjun-4366/Kerala-tourism",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    git: "https://github.com/Arjun-4366/Myntra",
+    live: "https://arjun-4366.github.io/Myntra/",
   },
   {
     id: 6,
@@ -295,7 +295,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "Discover this Rakuten clone demo built with HTML and CSS – a streamlined version of the popular shopping rewards platform!",
     img: "/rakuten.png",
     stack: ["/html.png", "/css.png"],
-    git: "https://github.com/Arjun-4366/Kerala-tourism",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    git: "https://github.com/Arjun-4366/Rakuten",
+    live: "https://arjun-4366.github.io/Rakuten/",
   },
 ]);
