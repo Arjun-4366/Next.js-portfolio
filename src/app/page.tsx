@@ -69,7 +69,7 @@ function page() {
               transition={transitions.moveUp}
             >
               <a
-                href={`/Arjun_TV_Resume.pdf`}
+                href={`/Arjun t v full stack.pdf`}
                 className="flex justify-center"
                 download
               >
