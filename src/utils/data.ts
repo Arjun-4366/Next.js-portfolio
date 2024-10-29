@@ -206,7 +206,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "/node.png",
     ],
     git: "https://github.com/Arjun-4366/Kerala-tourism",
-    // live: "https://github.com/Arjun-4366/Kerala-tourism",
+    live: "https://kerala-frontend-livid.vercel.app/",
   },
   {
     id: 2,
@@ -222,7 +222,7 @@ export const PROJECTS: ReadonlyArray<Projects> = Object.freeze([
       "/node.png",
     ],
     git: "https://github.com/Arjun-4366/Gear-plus-X",
-    live: "https://github.com/Arjun-4366/Kerala-tourism",
+    
   },
   {
     id: 3,
